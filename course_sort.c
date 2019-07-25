@@ -1,9 +1,12 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include "structdef.h"
 #include<stdlib.h>
 
-#define NUM 2
+#define NUM 3
 #define EXIT_SUCCESS 1
+
+//¬º»Î
 void input(SCORE array[], int n) {
 	int i;
 	SCORE* p = array;
@@ -20,4 +23,42 @@ void input(SCORE array[], int n) {
 		p->average = (p->req.english + p->req.mathema + p->req.physics + p->elec.history + p->elec.history) / 5;
 		p++;
 	}
+}
+
+//≈≈–Ú
+SCORE* sort(SCORE scores[], int n) {
+	int i, j;
+	SCORE tmp;
+	for (i = 0; i <n ; i++)
+	{
+		for (j = 0; j < n-i; j++)
+		{
+			if (scores[j].average < scores[j+1].average)
+			{
+				tmp = scores[j];
+				scores[j] = scores[j+1];
+				scores[j + 1] = tmp;
+			}
+		}
+	}
+	return scores;
+}
+
+// ‰≥ˆ
+void output(SCORE* p, int n) {
+	printf("%s   %s    %s", "name", "number", "avg");
+	for (int j = 0; j < n; j++)
+	{
+		printf("%s   %ld   %f", p->name, p->number, p->average);
+		p++;
+	}
+}
+
+int main() {
+	SCORE arr[NUM];
+	SCORE* p;
+	input(arr, NUM);
+	p = sort(arr, NUM);
+	output(p, NUM);
+	return EXIT_SUCCESS;
 }
