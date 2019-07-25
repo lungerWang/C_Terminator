@@ -3,7 +3,7 @@
 #include "structdef.h"
 #include<stdlib.h>
 
-#define NUM 3
+#define NUM 1
 #define EXIT_SUCCESS 1
 
 //Â¼Èë
@@ -19,8 +19,11 @@ void input(SCORE array[], int n) {
 		printf("input English, Math, Physics socre:");
 		scanf("%d,%d,%d", &(p->req.english), &(p->req.mathema), &(p->req.physics));
 		printf("input plutonomy, histroy:");
-		scanf("%d,%d", &(p->elec.history), &(p->elec.history));
-		p->average = (p->req.english + p->req.mathema + p->req.physics + p->elec.history + p->elec.history) / 5;
+		scanf("%d,%d", &(p->elec.history), &(p->elec.plutonomy));
+
+		float sum = ((p->req.english) + (p->req.mathema) + (p->req.physics) + (p->elec.history) + (p->elec.plutonomy));
+		float avg = sum / 5;
+		p->average = avg;
 		p++;
 	}
 }
