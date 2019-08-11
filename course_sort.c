@@ -20,4 +20,4 @@ void input(SCORE array[], int n) {
 		p->average = (p->req.english + p->req.mathema + p->req.physics + p->elec.history + p->elec.history) / 5;
 		p++;
 	}
-}
+} 
