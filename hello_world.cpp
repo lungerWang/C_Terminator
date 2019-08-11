@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
 
-void main() {
+void main2() {
 	cout <<"hello world" << endl;
 }
