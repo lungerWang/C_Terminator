@@ -21,9 +21,24 @@
     <ClCompile Include="hello_world.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="learn.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="game1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="game2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="structdef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="game1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="game2.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
