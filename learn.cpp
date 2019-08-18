@@ -8,6 +8,15 @@ using namespace std;
 
 
 int atk = 200;
+
+void printm(Point p) {
+	cout << p.getX() << ",," << p.getY() << ",,"<< &p <<endl;
+}
+
+void printm2(Point & p) {
+	cout << p.getX() << ",," << p.getY() << ",," << &p << endl;
+}
+
 void main() {
 	int atk = 100;
 	cout << atk << endl;
@@ -22,5 +31,9 @@ void main() {
 	Point p;
 	p.setX(10);
 	p.setY(11);
-	cout << p.getX() << ",," << p.getY() << endl;
+	cout << p.getX() << ",," << p.getY() << ",," << &p << endl;
+	//cout << p.getX() << ",," << p.getY() << endl;
+	printm(p);
+	printm2(p);
 }
+
