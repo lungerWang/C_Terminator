@@ -124,18 +124,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="course_sort.c" />
+    <ClCompile Include="DragonSward.cpp" />
     <ClCompile Include="game1.cpp" />
     <ClCompile Include="game2.cpp" />
     <ClCompile Include="hello_world.cpp" />
+    <ClCompile Include="Knife.cpp" />
     <ClCompile Include="learn.cpp" />
     <ClCompile Include="Point.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="circle.h" />
+    <ClInclude Include="DragonSward.h" />
     <ClInclude Include="game1.h" />
     <ClInclude Include="game2.h" />
+    <ClInclude Include="Knife.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="structdef.h" />
+    <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

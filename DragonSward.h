@@ -1,16 +1,15 @@
 #pragma once
 #include <iostream>
-#include "Weapon.h"
 #include <string>
+#include "Weapon.h"
 
 using namespace std;
 
-
-class Knife :public Weapon {
-
+class DragonSward : Weapon {
 public:
-	Knife();
-	
+
+	DragonSward();
+
 	virtual int getBaseDamage();
 
 	virtual int getSuckBlood();
@@ -18,5 +17,12 @@ public:
 	virtual bool getHold();
 
 	virtual bool getCrit();
+
+	//±©»÷ÂÊ ÎüÑªÂÊ Âé±ÔÂÊ
+	int critRate;
+	int suckRate;
+	int holdRate;
+
+	bool isTrigger(int rate);
 
 };
