@@ -48,5 +48,9 @@ void Hero::Attack(Monster* monster)
 			cout << "武器促发吸血效果，增加血量为：" <<addHp<< endl;
 		}
 		//掉怪物的血量
+		monster->isHold = isHold;
+		int realDamage = damage - monster->m_Def;
+		monster->m_Hp -= realDamage;
+
 	}
 }

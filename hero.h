@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include "Weapon.h"
+#include "Monster.h"
 using namespace std;
 class Monster;
 class Hero {

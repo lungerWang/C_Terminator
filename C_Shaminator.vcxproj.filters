@@ -42,6 +42,9 @@
     <ClCompile Include="Hero.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="structdef.h">
@@ -69,6 +72,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="hero.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

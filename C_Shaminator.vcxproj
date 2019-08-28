@@ -131,6 +131,7 @@
     <ClCompile Include="Hero.cpp" />
     <ClCompile Include="Knife.cpp" />
     <ClCompile Include="learn.cpp" />
+    <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Point.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +141,7 @@
     <ClInclude Include="game2.h" />
     <ClInclude Include="hero.h" />
     <ClInclude Include="Knife.h" />
+    <ClInclude Include="Monster.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="structdef.h" />
     <ClInclude Include="Weapon.h" />
