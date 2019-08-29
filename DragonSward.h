@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class DragonSward : Weapon {
+class DragonSward : public Weapon {
 public:
 
 	DragonSward();

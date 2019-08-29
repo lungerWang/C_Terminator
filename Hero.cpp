@@ -51,6 +51,8 @@ void Hero::Attack(Monster* monster)
 		monster->isHold = isHold;
 		int realDamage = damage - monster->m_Def;
 		monster->m_Hp -= realDamage;
+		this->m_Hp += addHp;
 
+		cout << "英雄"<< this->m_Name << "攻击了敌人"<< monster->m_Name <<"，造成了伤害" << realDamage << endl;
 	}
 }
