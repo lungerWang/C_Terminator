@@ -5,8 +5,10 @@
 #include "Monster.h"
 
 using namespace std;
+class Monster;
 
-class Hero {
+class Hero
+{
 public:
 	Hero();
 	string m_Name;

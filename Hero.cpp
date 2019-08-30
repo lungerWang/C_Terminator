@@ -24,6 +24,9 @@ void Hero::attack(Monster* monster)
 
 	if (this->weapon == NULL) {
 		damage = this->m_Atk;
+		int realDamage = damage - monster->m_Def;
+		cout << "英雄" << this->m_Name << "攻击了敌人" << monster->m_Name << "，造成了伤害" << realDamage << endl;
+		monster->m_Hp -= realDamage;
 	}
 	else {
 		//基础伤害

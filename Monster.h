@@ -4,6 +4,7 @@
 #include"Hero.h"
 
 using namespace std;
+class Hero;
 class Monster {
 public:
 	Monster();
