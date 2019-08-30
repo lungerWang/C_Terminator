@@ -71,10 +71,10 @@
     <ClInclude Include="DragonSward.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="hero.h">
+    <ClInclude Include="Monster.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Monster.h">
+    <ClInclude Include="Hero.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

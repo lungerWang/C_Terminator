@@ -3,8 +3,9 @@
 #include <string>
 #include "Weapon.h"
 #include "Monster.h"
+
 using namespace std;
-class Monster;
+
 class Hero {
 public:
 	Hero();
@@ -14,5 +15,5 @@ public:
 	int m_Hp;
 	Weapon* weapon;
 	void EquipWeapon(Weapon* weapon);
-	void Attack(Monster* monster);
+	void attack(Monster* monster);
 };

@@ -53,6 +53,35 @@ void play() {
 	}
 	getchar();
 
+	int round = 1;
+	while (true) {
+		getchar();
+		system("cls");
+		cout << "---- 当前第" <<round<<"回合开始 ----"<<endl;
+		if (hero->m_Hp <= 0) {
+			cout<<"您已阵亡，game over"<<endl;
+			break;
+		}
+		hero->attack(monster);
+		if (monster->m_Hp <= 0) {
+			cout << "怪物已死，恭喜您游戏通关" << endl;
+			break;
+		}
+		monster->attack(hero);
+		if (hero->m_Hp <= 0) {
+			cout << "您已阵亡，game over" << endl;
+			break;
+		}
+		cout << "英雄"<<hero->m_Name<<"剩余血量：" <<hero->m_Hp<< endl;
+		cout << "怪物" << monster->m_Name << "剩余血量：" << monster->m_Hp << endl;
+		round++;
+
+	}
+	delete hero;
+	delete monster;
+	delete knife;
+	delete dragon;
+
 }
 
 void main() {

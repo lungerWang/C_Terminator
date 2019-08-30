@@ -139,7 +139,7 @@
     <ClInclude Include="DragonSward.h" />
     <ClInclude Include="game1.h" />
     <ClInclude Include="game2.h" />
-    <ClInclude Include="hero.h" />
+    <ClInclude Include="Hero.h" />
     <ClInclude Include="Knife.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Point.h" />

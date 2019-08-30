@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include"hero.h"
+#include"Hero.h"
+
 using namespace std;
 class Monster {
 public:
@@ -13,4 +14,5 @@ public:
 	int m_Hp;
 	bool isHold;
 	void attack(Hero* hero);
+
 };

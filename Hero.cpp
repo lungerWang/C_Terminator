@@ -15,7 +15,7 @@ void Hero::EquipWeapon(Weapon* weapon)
 	cout << "英雄名：" << this->m_Name << "带上了" << this->weapon->m_WeaponName << endl;
 }
 
-void Hero::Attack(Monster* monster)
+void Hero::attack(Monster* monster)
 {
 	int damage = 0;
 	int addHp = 0;
