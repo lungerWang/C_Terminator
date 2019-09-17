@@ -84,7 +84,7 @@ void play() {
 
 }
 
-void main() {
+void test2() {
 	if (false) {
 		int atk = 100;
 		cout << atk << endl;

@@ -127,12 +127,14 @@
     <ClCompile Include="DragonSward.cpp" />
     <ClCompile Include="game1.cpp" />
     <ClCompile Include="game2.cpp" />
+    <ClCompile Include="game_snack.cpp" />
     <ClCompile Include="hello_world.cpp" />
     <ClCompile Include="Hero.cpp" />
     <ClCompile Include="Knife.cpp" />
     <ClCompile Include="learn.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Wall.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="circle.h" />
@@ -144,6 +146,7 @@
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="structdef.h" />
+    <ClInclude Include="Wall.h" />
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
