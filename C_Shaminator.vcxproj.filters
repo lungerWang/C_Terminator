@@ -51,6 +51,9 @@
     <ClCompile Include="game_snack.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Snake.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="structdef.h">
@@ -84,6 +87,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Wall.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Snake.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

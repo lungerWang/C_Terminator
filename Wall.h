@@ -1,6 +1,4 @@
-#ifndef _WALL_HEAD
-#define _WALL_HEAD
-#endif
+#pragma once
 #include <iostream>
 using namespace std;
 
