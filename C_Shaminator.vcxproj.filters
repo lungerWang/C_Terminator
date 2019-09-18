@@ -48,10 +48,13 @@
     <ClCompile Include="Wall.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="game_snack.cpp">
+    <ClCompile Include="Snake.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Snake.cpp">
+    <ClCompile Include="food.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="game_snake.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -90,6 +93,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Snake.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="food.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

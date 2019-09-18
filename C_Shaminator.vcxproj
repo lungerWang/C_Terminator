@@ -125,9 +125,10 @@
   <ItemGroup>
     <ClCompile Include="course_sort.c" />
     <ClCompile Include="DragonSward.cpp" />
+    <ClCompile Include="food.cpp" />
     <ClCompile Include="game1.cpp" />
     <ClCompile Include="game2.cpp" />
-    <ClCompile Include="game_snack.cpp" />
+    <ClCompile Include="game_snake.cpp" />
     <ClCompile Include="hello_world.cpp" />
     <ClCompile Include="Hero.cpp" />
     <ClCompile Include="Knife.cpp" />
@@ -140,6 +141,7 @@
   <ItemGroup>
     <ClInclude Include="circle.h" />
     <ClInclude Include="DragonSward.h" />
+    <ClInclude Include="food.h" />
     <ClInclude Include="game1.h" />
     <ClInclude Include="game2.h" />
     <ClInclude Include="Hero.h" />
