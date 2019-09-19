@@ -10,12 +10,16 @@ void main() {
 	srand((unsigned int)time(NULL));
 	Wall wall;
 	wall.initWall();
-	Snake snake(wall);
-	snake.initSnake();
-	//wall.setWall(5, 4 ,'=');
-	//wall.setWall(5, 5 ,'=');
-	//wall.setWall(5, 6 ,'@');
 	Food food(wall);
 	food.setFood();
+	Snake snake(wall, food);
+	snake.initSnake();
+    //wall.setWall(5, 4 ,'=');
+	//wall.setWall(5, 5 ,'=');
+	//wall.setWall(5, 6 ,'@');
+	snake.move('w');
+	snake.move('w');
+	snake.move('a');
+	//snake.deletePoint();
 	wall.drawWall();
 }

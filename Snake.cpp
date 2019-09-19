@@ -1,6 +1,6 @@
 #include "Snake.h"
 
-Snake::Snake(Wall &tmpWall):wall(tmpWall)
+Snake::Snake(Wall &tmpWall, Food &tmpFood):wall(tmpWall), food(tmpFood)
 {
 	pHead = NULL;
 }
@@ -36,4 +36,63 @@ void Snake::addPoint(int x, int y)
 	newPoint->next = pHead;
 	pHead = newPoint;
 	wall.setWall(pHead->x, pHead->y, '@');
+}
+
+void Snake::deletePoint()
+{
+	//至少2个节点才能删除尾结点
+	if (pHead == NULL || pHead->next == NULL) {
+		return;
+	}
+	Point* pCur = pHead->next;
+	Point* pPre = pHead;
+	while (pCur->next != NULL) {
+		pCur = pCur->next;
+		pPre = pPre->next;
+	}
+	wall.setWall(pCur->x, pCur->y, ' ');
+	delete pCur;
+	pCur = NULL;
+	pPre->next = NULL;
+
+}
+
+bool Snake::move(char key)
+{
+	int x = pHead->x;
+	int y = pHead->y;
+	switch (key)
+	{
+
+	case UP:
+		x--;
+		break;
+	case DOWN:
+		x++;
+		break;
+	case LEFT:
+		y--;
+		break;
+	case RIGHT:
+		y++;
+		break;
+
+	default:
+		break;
+
+	}
+	if (wall.getWall(x, y) == '*' || wall.getWall(x, y) == '=') {
+		cout << "游戏结束"<<endl;
+		return false;
+	}
+	//吃到食物
+	if (wall.getWall(x, y) == '#') {
+		addPoint(x, y);
+		food.setFood();
+	}
+	else {
+		addPoint(x, y);
+		deletePoint();
+	}
+	return true;
 }
