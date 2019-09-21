@@ -1,10 +1,21 @@
 #include "Snake.h"
+#include<Windows.h>
 
 Snake::Snake(Wall &tmpWall, Food &tmpFood):wall(tmpWall), food(tmpFood)
 {
 	pHead = NULL;
 	isLoop = false;
 }
+
+
+void gotoxy(HANDLE hOut, int x, int y) {
+	COORD pos;
+	pos.X = x;
+	pos.Y = y;
+	SetConsoleCursorPosition(hOut, pos);
+}
+HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+
 
 void Snake::initSnake()
 {
@@ -33,10 +44,14 @@ void Snake::addPoint(int x, int y)
 	newPoint->next = NULL;
 	if (pHead != NULL) {
 		wall.setWall(pHead->x, pHead->y, '=');
+		gotoxy(hOut, pHead->y * 2, pHead->x);
+		cout << '=';
 	}
 	newPoint->next = pHead;
 	pHead = newPoint;
 	wall.setWall(pHead->x, pHead->y, '@');
+	gotoxy(hOut, pHead->y * 2, pHead->x);
+	cout << '@';
 }
 
 void Snake::deletePoint()
@@ -52,6 +67,8 @@ void Snake::deletePoint()
 		pPre = pPre->next;
 	}
 	wall.setWall(pCur->x, pCur->y, ' ');
+	gotoxy(hOut, pCur->y * 2, pCur->x);
+	cout << ' ';
 	delete pCur;
 	pCur = NULL;
 	pPre->next = NULL;
@@ -113,6 +130,8 @@ bool Snake::move(char key)
 		deletePoint();
 		if (isLoop) {
 			wall.setWall(x, y, '@');
+			gotoxy(hOut, y * 2, x);
+			cout << '@';
 		}
 	}
 	return true;

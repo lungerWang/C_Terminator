@@ -8,12 +8,14 @@ using namespace std;
 #include<conio.h>
 #include<Windows.h>
 
+
 void main() {
 	srand((unsigned int)time(NULL));
 	bool isDead = false;
 	char preKey = NULL;
 	Wall wall;
 	wall.initWall();
+	wall.drawWall();
 	Food food(wall);
 	food.setFood();
 	Snake snake(wall, food);
@@ -25,7 +27,7 @@ void main() {
 	//snake.move('w');
 	//snake.move('a');
 	//snake.deletePoint();
-	wall.drawWall();
+	
 	while (!false) {
 		char key = _getch();
 		if (preKey == NULL && key == snake.LEFT) {
@@ -43,8 +45,8 @@ void main() {
 				}
 				preKey = key;
 				if (snake.move(key)) {
-					system("cls");
-					wall.drawWall();
+					//system("cls");
+					//wall.drawWall();
 					Sleep(snake.getSleepTime());
 				}
 				else {
