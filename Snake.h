@@ -35,7 +35,9 @@ public:
 	Point* pHead;
 	Wall& wall;
 	Food& food;
-
+	bool isLoop;
+	int getSleepTime();
+	int countList();
 
 
 };

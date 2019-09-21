@@ -3,6 +3,7 @@
 Snake::Snake(Wall &tmpWall, Food &tmpFood):wall(tmpWall), food(tmpFood)
 {
 	pHead = NULL;
+	isLoop = false;
 }
 
 void Snake::initSnake()
@@ -81,10 +82,27 @@ bool Snake::move(char key)
 		break;
 
 	}
-	if (wall.getWall(x, y) == '*' || wall.getWall(x, y) == '=') {
-		cout << "游戏结束"<<endl;
-		return false;
+
+	//判断是不是碰到尾巴，碰到尾巴不应该死亡
+	Point* pCur = pHead->next;
+	Point* pPre = pHead;
+	while (pCur->next != NULL) {
+		pCur = pCur->next;
+		pPre = pPre->next;
 	}
+	if (pCur->x == x && pCur->y == y) {
+		isLoop = true;
+	}else {
+		if (wall.getWall(x, y) == '*' || wall.getWall(x, y) == '=') {
+			addPoint(x, y);
+			system("cls");
+			wall.drawWall();
+			cout << "游戏结束" << endl;
+			return false;
+		}
+	}
+
+	
 	//吃到食物
 	if (wall.getWall(x, y) == '#') {
 		addPoint(x, y);
@@ -93,6 +111,36 @@ bool Snake::move(char key)
 	else {
 		addPoint(x, y);
 		deletePoint();
+		if (isLoop) {
+			wall.setWall(x, y, '@');
+		}
 	}
 	return true;
+}
+
+int Snake::getSleepTime()
+{
+	int sleepTime = 0;
+	int size = countList();
+	if (size < 5) {
+		sleepTime = 200;
+	}else if (size >= 5 && size <= 8) {
+		sleepTime = 150;
+	}
+	else {
+		sleepTime = 100;
+	}
+	return sleepTime;
+}
+
+int Snake::countList()
+{
+	int size = 0;
+	Point* curPoint = pHead;
+	while (curPoint != NULL) {
+		size++;
+		curPoint = curPoint->next;
+	}
+	
+	return size;
 }
